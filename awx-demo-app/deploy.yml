@@ -1,4 +1,9 @@
+# Inclue collections de módulos necesarios
+- collections:
+    - community.mysql
+
 # import_playbook soporta handlers correctamente.
 # Por lo tanto, este playbook importa otros playbooks que contienen handlers.
 - import_playbook: site.yml
 - import_playbook: stack_status.yml
+
