@@ -1,4 +1,8 @@
 ---
+# Include collections de módulos necesarios
+- collections:
+    - community.mysql
+
 - hosts: database
   become: true
   roles:
