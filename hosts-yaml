@@ -1,9 +1,9 @@
 all:
   ansible_python_interpreter: /usr/bin/python3.12
 
-database:
+database: #group name, actua como label
   hosts:
-    db_01:
+    db_01: #host name
       ansible_host: 192.168.11.20
       ansible_connection: ssh
       ansible_user: vagrant
