@@ -1,6 +1,0 @@
----
-- hosts: loadbalancer
-  become: true
-  tasks:
-    - name: install collections
-      command: ansible-galaxy collection install -r requirements.yml -p /runner/.ansible/collections
