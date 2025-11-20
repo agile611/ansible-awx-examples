@@ -6,7 +6,6 @@
   with_items:
     - python3-mysqldb
     - python3-pip
-    - pymysql
 
 - name: install mysql-server
   apt: name=mysql-server state=present update_cache=yes
@@ -21,8 +20,8 @@
 - name: ensure mysql started
   service: name=mysql state=started enabled=yes
 
-- name: create demo database
-  mysql_db: name=demo state=present
+#- name: create demo database
+#  mysql_db: name=demo state=present
 
-- name: create demo user
-  mysql_user: name=demo password=demo priv=demo.*:ALL host='%' state=present
+#- name: create demo user
+#  mysql_user: name=demo password=demo priv=demo.*:ALL host='%' state=present
