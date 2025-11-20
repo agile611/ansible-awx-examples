@@ -5,6 +5,8 @@
   apt: name={{item}} state=present update_cache=yes
   with_items:
     - python3-mysqldb
+    - python3-pip
+    - pymysql
 
 - name: install mysql-server
   apt: name=mysql-server state=present update_cache=yes
