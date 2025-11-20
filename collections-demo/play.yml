@@ -1,9 +1,0 @@
-- name: Demo the Ansible Collection
-  hosts: loadbalancer
-  become: yes
-  collections:   # Define collections to search
-    - community.mysql
-
-  tasks:
-    - name: create demo database
-      community.mysql.mysql_db: name=demo state=present

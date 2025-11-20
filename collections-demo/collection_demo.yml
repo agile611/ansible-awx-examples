@@ -1,6 +1,0 @@
-- name: Demo the Ansible Collection
-  hosts: database
-  become: yes
-  tasks:
-    - name: create demo database
-      community.mysql.mysql_db: name=demo state=present
