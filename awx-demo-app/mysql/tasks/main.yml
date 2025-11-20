@@ -19,11 +19,8 @@
 - name: ensure mysql started
   service: name=mysql state=started enabled=yes
 
-#- name: set root password
-#  command: mysql -uroot -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'; FLUSH PRIVILEGES;"
+- name: create demo database
+  mysql_db: name=demo state=present
 
-#- name: create demo database
-#  command: mysql -uroot -e "CREATE DATABASE IF NOT EXISTS demo"
-
-#- name: create demo user
-#  command: mysql -uroot -e "CREATE USER IF NOT EXISTS 'demo'@'%' IDENTIFIED BY 'demo'"
+- name: create demo user
+  mysql_user: name=demo password=demo priv=demo.*:ALL host='%' state=present

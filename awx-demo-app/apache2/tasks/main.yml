@@ -8,7 +8,7 @@
     - libapache2-mod-wsgi-py3
 
 - name: ensure mod_wsgi enabled
-  command: a2enmod wsgi
+  apache2_module: state=present name=wsgi
   notify: restart apache2
 
 - name: de-activate default apache site
