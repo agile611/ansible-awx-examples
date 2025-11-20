@@ -17,29 +17,6 @@ To install collections use the example `pip.yml` and add the collection to `coll
 
 **Quick start**
 
-1. (Optional) Create a virtualenv and activate it:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-2. Install Python dependencies if any (some playbooks may use community modules):
-
-```bash
-pip install -r awx-demo-app/demo_app/files/demo/requirements.txt || true
-```
-
-3. Install Ansible collections listed in `collections/requirements.yml`:
-
-```bash
-ansible-galaxy collection install -r collections/requirements.yml
-```
-
-Note: This repository also includes an example `pip.yml` playbook. The intention is that you can add collection names to `collections/requirements.yml` and then use the `pip.yml` example if you prefer to install via an automation playbook.
-
-**Run the example playbooks**
-
 - Run the top-level demo playbook (adjust inventory as needed):
 
 ```bash
@@ -69,7 +46,11 @@ ansible-playbook -i awx-demo-app/mysql/tests/inventory awx-demo-app/mysql/tests/
 - Each role includes a `tests/` directory with a simple inventory and `test.yml` playbook. Run these locally to sanity-check roles.
 - If you use Molecule, you can create Molecule scenarios per role (not included by default here).
 
-**IMPORTANT TO GET COLLECTIONS FROM ANSIBLE GALAXY**
+**Upload Bulk Hosts lists**
+
+The template to upload hosts lists is the file `hosts-yaml`. Adapt your inventory accordingly.
+
+**IMPORTANT TO GET COLLECTIONS FROM ANSIBLE GALAXY INSIDE AWX**
 
 Add in Jobs Settings > Extra Environment Variables these values:
 
