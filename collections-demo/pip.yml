@@ -1,0 +1,7 @@
+---
+- name: Test for collections/requirements.yml with custom EE
+  hosts: all
+
+  tasks:
+    - name: Just get the list from default pip
+      community.general.pip_package_info:
