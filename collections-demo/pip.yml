@@ -4,4 +4,10 @@
 
   tasks:
     - name: Just get the list from default pip
-      community.general.pip_package_info:
+      pip_package_info:
+        name: ansible
+      register: pip_info
+
+    - name: Show pip info
+      debug:
+        var: pip_info
